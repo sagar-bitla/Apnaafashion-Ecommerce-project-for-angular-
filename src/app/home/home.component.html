@@ -1,0 +1,128 @@
+<marquee style="color: black;">
+    <b>Download the Apnaa Fashion app and get ₹150 off*. Use code: AF150 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Download the Apnaa Fashion app and get ₹150 off*. Use code: AF150</b> 
+   </marquee>
+   <div class="container-fluid">
+     <div class="row">
+       <carousel>
+         <slide>
+           <img src="assets/images/banner1.webp" alt="first slide" style="display: block; width: 100%;">
+           <div class="carousel-caption d-none d-md-block">
+   
+           </div>
+         </slide>
+         <slide>
+           <img src="assets/images/banner2.webp" alt="second slide" style="display: block; width: 100%;">
+           <div class="carousel-caption d-none d-md-block">
+   
+           </div>
+         </slide>
+         <slide>
+           <img src="assets/images/banneer3.webp" alt="third slide" style="display: block; width: 100%;">
+           <div class="carousel-caption d-none d-md-block">
+   
+           </div>
+         </slide>
+       </carousel>
+     </div>
+     </div>
+   
+   
+   <div class="container">
+     <div class="row">
+       <img src="assets/images/catagery.webp">
+       <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex flex-wrap m-2 mb-2" *ngFor="let pro of productlist">
+         <div class="card " style="width: 18rem;">
+           <img [src]="pro.image" class="card-img-top" alt="...">
+   
+         </div>
+   
+       </div>
+     </div>
+   
+   </div>
+   <div class="container-fluid">
+     <div class="row">
+       <div *ngFor="let pb of productbanner">
+         <img style="width: 98vw;" [src]="pb.image">
+         <!-- <img style="width: 98vw;"  [src]="pb.image1"> -->
+       </div>
+     </div>
+   </div>
+   
+   
+   <div class="container">
+     <div class="row">
+       <div class="col">
+   
+         <img [src]="videotag.imagevide">
+   
+       </div>
+     </div>
+   </div>
+   
+   <div class="container">
+     <div class="row">
+       <div class="col m-auto" style="width: 100vw;">
+         <iframe width="1120" height="615" src="https://www.youtube.com/embed/gz3eQTyqcWI" title="YouTube video player"
+           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen></iframe>
+       </div>
+       <div class="col">
+   
+   
+   
+       </div>
+     </div>
+   </div>
+   
+   
+   <div class="container">
+     <div class="row">
+       <div class="col mb-4">
+   
+         <img [src]="reviewtag.reviewtitle">
+   
+       </div>
+     </div>
+   </div>
+   
+   <div class="container-fluid">
+     <div class="row">
+   
+   
+       <div class="col-12 col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let rv of review">
+   
+         <div class="card " style="width: 18rem;">
+           <img [src]="rv.review1" class="card-img-top" alt="...">
+   
+         </div>
+   
+       </div>
+   
+     </div>
+   </div>
+   
+   
+   
+   <!-- <div class="container">
+     <div class="row">
+       <img src="assets/images/catagery.webp">
+       <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex flex-wrap m-2 mb-2"  *ngFor="let pro of productlist">
+         <div class="card " style="width: 18rem;">
+           <img [src]="pro.image" class="card-img-top" alt="...">
+           
+           </div>
+          
+         </div>
+       </div>
+   
+     </div> -->
+   
+   <!-- <div class="container-fluid">
+       <div class="row">
+          <div *ngFor="let pb of productbanner">
+             <img [src]="pb.image">
+             <img [src]="pb.image1">
+           </div>
+       </div>
+     </div> -->

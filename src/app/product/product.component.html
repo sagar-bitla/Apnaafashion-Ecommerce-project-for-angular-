@@ -1,0 +1,76 @@
+<!-- radio button start -->
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 col-12">
+      
+      <div class="tab">
+        <ul>
+          <li id="btncheck1" (click)="filterProduct('all')">All Products</li>
+          <li id="btncheck2" (click)="filterProduct('Womens')">Womens</li>
+          <li id="btncheck3" (click)="filterProduct('Mens')">Mens</li>
+          <li id="btncheck4" (click)="filterProduct('Kids')">Kids</li>
+          <li id="btncheck5" (click)="filterProduct('Sunglasses')">Sunglasses</li>
+          <li id="btncheck6" (click)="filterProduct('Footwear')">Footwear</li>
+
+
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    <div class="col-lg-3 col-md-4 col-12 mt-1">
+      <div class="search-button">
+        <span><i class="bi bi-search"></i></span>
+        <input class="form-control input-search pr-4" type="text" placeholder="Search Product"
+          aria-label="default input example" [(ngModel)]="searchBy">
+      </div>
+
+    </div>
+    <div class="col-2">
+      <p>{{searchBy}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let product of filterProducts | slice:start_index:end_index ">
+      <div class="card">
+        <div class="product-img">
+          <div class="card-img-top">
+            <img [src]="product.image" alt="...">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center" [routerLink]="['/Product',product.id]">{{product.title | uppercase}}</h5><br>
+          <span class="card-discription">{{product.discription}}</span>
+          <h3 class="card-title text-center product-price">{{product.price | currency:"INR" }} <span class="ml-4">
+              <del>({{product.oldprice | currency:"INR"}})</del> </span></h3>
+
+
+          <h5 class="card-title d-flex justify-content-center">
+            
+            <app-star [rating]="product.rating"></app-star>
+          </h5>
+          <div class="text-center">
+            <a class="btn btn-primary" (click)="addToCart()">Add to cart</a>
+            <p>{{product.delivery}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+   <!-- pagination start-->
+   <nav aria-label="..." class="d-flex flex-row-reverse ">
+    <ul class="pagination pagination-primary pagination-md">
+      <li class="page-item border border-primary"><a class="page-link" (click)="next_page(1)">1</a></li>
+      <li class="page-item border border-primary" ><a class="page-link" (click)="next_page(2)">2</a></li>
+      <li class="page-item border border-primary"><a class="page-link" (click)="next_page(3)">3</a></li>
+    </ul>
+  </nav>
+  <!-- pagination end -->
+</div>

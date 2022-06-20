@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 mt-4 " *ngIf="receivedProduct$ | async as product; else noProductFound">
+            <div class="card" style="width: 18rem;">
+                <img [src]="product.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.title}}</h5>
+                  <p class="card-text">{{product.discription}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 mt-4">
+            <h3>--Review--</h3>
+            <app-review-form ></app-review-form>
+        </div>
+    </div>
+</div>
+
+<ng-template #noProductFound>
+    <h1>No Product Found</h1>
+</ng-template>

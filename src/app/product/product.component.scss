@@ -1,0 +1,88 @@
+
+//multile button mobile,watch start
+.tab ul{
+    padding: 10px;
+    background: rgb(86, 138, 158);
+    display: inline-block;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.tab ul li{
+    display: inline-block;
+    list-style-type:none;
+    border-right: 2px solid #ffff;
+    color: lightblue;
+    font-size: 16px;
+    padding: 0 24px;
+    font-size: 16px;
+    padding: 0 24px;
+    font-weight: 300;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.tab ul li:last-child{
+    border-right: none;
+}
+
+//multile button mobile,watch end
+
+
+.active {
+    color: black;
+    background-color: aqua;
+}
+.card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 10px;
+}
+
+.card-img-top {
+
+    display: flex;
+    justify-content: center;
+    img {
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
+       padding: 10px 0;
+    }
+}
+.product-img {
+    &:hover{
+        .card-img-top {
+            img{
+                -webkit-transform: scale(1.08);
+                transform: scale(1.08);
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.product-price {
+    span {
+        font-size: 14px;
+        color:darkgrey;
+    }
+}
+.card-body {
+    background: #3ccaf02b;
+}
+//search icon
+.search-button{
+    position: relative;
+    .bi-search {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+    }
+    .input-search{
+        padding-left: 30px;
+        
+    }
+}
+
+// pagination
+.page-link:hover{
+    background-color: lightskyblue;
+}
